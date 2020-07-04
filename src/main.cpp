@@ -20,7 +20,7 @@ bool firsttime = true;
 // Motion Sensor Pin
 const int MOTIONSENSORPIN = D1;  // D5 on NodeMCU is GPIO14 on 202
 boolean motionDetected = false;
-const int LIGHT_LEVEL_PIN = D8;
+const int LIGHT_LEVEL_PIN = D7;
 boolean lightlevel = false;
 
 #define TRACE true
@@ -98,7 +98,7 @@ void setup() {
   lastReconnectAttempt = 0;
 
   pinMode(MOTIONSENSORPIN, INPUT);
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LIGHT_LEVEL_PIN, INPUT);
   digitalWrite(LED_BUILTIN, LOW);   // Turn on LED until connected
 
 
